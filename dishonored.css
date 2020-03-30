@@ -1,1 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700&display=swap');
 
+.charsheet {
+    background-image: url("https://raw.githubusercontent.com/Cavogus/projects/master/CharacterSheet.png");
+    background-repeat: no-repeat;
+    max-width: auto;
+    min-width: auto;
+    max-height: auto;
+    min-height: auto;
+}
+
+
+/*----------------- GENERAL CSS ------------------*/
+
+textarea {
+  width: auto;
+  height: auto;
+}
+
+.sheet-main {
+    width: 546;
+    height: 819px;
+    font-family: 'Cinzel';
+}
+
+.sheet-flex-col {
+  display: flex;
+  flex-flow: row wrap;
+  /*justify-content: flex-start;*/
+}
+
+.sheet-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-info {
+    position: relative;
+    left: 160px;
+    top: 37px;
+}
+
+.sheet-name {
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-age {
+    position: relative;
+    top: 7px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-first-truth {
+    position: relative;
+    top: 15px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-second-truth {
+    position: relative;
+    top: 22px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-archetype {
+    position: relative;
+    top: 30px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-stress {
+    border-color: black;
+    position: relative;
+    border-color: transparent;
+    background-color: transparent;
+    top: 83px;
+    left: 168px;
+}
+
+input[type="checkbox"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="checkbox"] + span::before
+{
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: transparent;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+input[type="checkbox"] + span::before
+{
+    content: "";
+    width: 10px;
+    height: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+input[type="checkbox"]:checked + span::before
+{
+    background-color: transparent;
+    border-color: transparent;
+    content: "⬤";
+}
+
+.sheet-stress1 {
+    position: relative;
+    top: 31px;
+    left: 21px;
+}
+.sheet-stress2 {
+    position: relative;
+    top: 2px;
+    left: 32px;
+}
+.sheet-stress3 {
+    position: relative;
+    top: -24px;
+    left: 44px;
+}
+.sheet-stress4 {
+    position: relative;
+    top: -49px;
+    left: 58px;
+}
+.sheet-stress5 {
+    position: relative;
+    top: -71px;
+    left: 72px;
+}
+.sheet-stress6 {
+    position: relative;
+    top: -91px;
+    left: 87px;
+}
+.sheet-stress7 {
+    position: relative;
+    top: -110px;
+    left: 102px;
+}
+.sheet-stress8 {
+    position: relative;
+    top: -125px;
+    left: 117px;
+}
+.sheet-stress9 {
+    position: relative;
+    top: -139px;
+    left: 131px;
+}
+.sheet-stress10 {
+    position: relative;
+    top: -150px;
+    left: 145px;
+}
+.sheet-stress11 {
+    position: relative;
+    top: -160px;
+    left: 158px;
+}
+.sheet-stress12 {
+    position: relative;
+    top: -168px;
+    left: 168px;
+}
+
+.sheet-skills {
+    position: relative;
+    bottom: 82px;
+    left: 103px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-fight {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    width: 10px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-move {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 5px;
+    top: -12px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-study {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -24px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-survive {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -38px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-talk {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -52px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-tinker {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -65px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-styles {
+    position: relative;
+    bottom: 260px;
+    left: 385px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-boldly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    width: 10px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-carefully {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 5px;
+    top: -13px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-cleverly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -25px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-forcefully {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -39px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-quietly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -54px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-swiftly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -68px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-button {
+    position: relative;
+    bottom: 360px;
+    left: 250px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sheet-momentum {
+    position: relative;
+    top: -188px;
+    left: 118px;
+    background-color: transparent;
+    font-size: 20px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-momentum-text {
+    position: relative;
+    top: -208px;
+    left: -270px;
+    background-color: transparent;
+    font-size: 12px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-void-points {
+    position: relative;
+    bottom: 232px;
+    left: 118px;
+    background-color: transparent;
+    font-size: 20px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.sheet-contacts {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height:100px;
+    min-width: 150px;
+    max-width:150px;
+    left: 0px;
+    top: -465px;
+}
+
+.sheet-focuses {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height:100px;
+    min-width: 150px;
+    max-width:150px;
+    left: 370px;
+    top: -600px;
+}
+.sheet-talents {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 160px;
+    max-width:160px;
+    left: 180px;
+    top: -660px;
+}
+
+.sheet-notes {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 120px;
+    max-width:120px;
+    left: 55px;
+    top: -625px;
+}
+
+.sheet-belongings {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 120px;
+    max-width:120px;
+    left: 343px;
+    top: -750px;
+}
+
+.sheet-powers {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    max-width:100px;
+    left: 210px;
+    top: -880px;
+}

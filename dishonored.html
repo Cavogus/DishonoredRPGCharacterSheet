@@ -37,11 +37,11 @@
         <label><input type="number" name="attr_swiftly" value="4" min="4" max="8" class="swiftly"/></label>
     </div>
     <div class="button">
-        <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1, [[1]]|2, [[2]]|3, [[3]]|4, [[4]]|5, [[5]]}}} {{result=[[d20]][[d20]]?{Momentum?|0, &#32|1, [[d20]]|2, [[d20]][[d20]]|3, [[d20]][[d20]][[d20]]}}}'/>
+        <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[?{Number of Dice|2}d20<[[?{Skill}+?{Style}]]cs<?{Focus}cf20]]}}'/>
     </div>
     <div class="momentum">
         <label><input type="number" name="attr_momentum" value="0" min="0" max="6" class="momentum"/></label>
-        <label class="momentum-text">Momentum</label>
+        <div class="momentum-text">Momentum</div>
     </div>
     <div class="void-points">
         <label><input type="number" name="attr_void_points" value="0" min="0" max="3" class="void-points"/></label>

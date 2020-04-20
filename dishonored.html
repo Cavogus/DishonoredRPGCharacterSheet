@@ -7,18 +7,18 @@
         <label><input name="attr_archetype" type="text" class="archetype" placeholder="Archetype"/></label>
     </div>
     <div class="stress">
-        <div class="stress1"><input type="checkbox" class="stress1"><span></span></div>
-        <div class="stress2"><input type="checkbox" class="stress2"><span></span></div>
-        <div class="stress3"><input type="checkbox" class="stress3"><span></span></div>
-        <div class="stress4"><input type="checkbox" class="stress4"><span></span></div>
-        <div class="stress5"><input type="checkbox" class="stress5"><span></span></div>
-        <div class="stress6"><input type="checkbox" class="stress6"><span></span></div>
-        <div class="stress7"><input type="checkbox" class="stress7"><span></span></div>
-        <div class="stress8"><input type="checkbox" class="stress8"><span></span></div>
-        <div class="stress9"><input type="checkbox" class="stress9"><span></span></div>
-        <div class="stress10"><input type="checkbox" class="stress10"><span></span></div>
-        <div class="stress11"><input type="checkbox" class="stress11"><span></span></div>
-        <div class="stress12"> <input type="checkbox" class="stress12"><span></span></div>
+        <div class="stress1"><input name="attr_stress1" type="checkbox" class="stress1"><span></span></div>
+        <div class="stress2"><input name="attr_stress2" type="checkbox" class="stress2"><span></span></div>
+        <div class="stress3"><input name="attr_stress3" type="checkbox" class="stress3"><span></span></div>
+        <div class="stress4"><input name="attr_stress4" type="checkbox" class="stress4"><span></span></div>
+        <div class="stress5"><input name="attr_stress5" type="checkbox" class="stress5"><span></span></div>
+        <div class="stress6"><input name="attr_stress6" type="checkbox" class="stress6"><span></span></div>
+        <div class="stress7"><input name="attr_stress7" type="checkbox" class="stress7"><span></span></div>
+        <div class="stress8"><input name="attr_stress8" type="checkbox" class="stress8"><span></span></div>
+        <div class="stress9"><input name="attr_stress9" type="checkbox" class="stress9"><span></span></div>
+        <div class="stress10"><input name="attr_stress10" type="checkbox" class="stress10"><span></span></div>
+        <div class="stress11"><input name="attr_stress11" type="checkbox" class="stress11"><span></span></div>
+        <div class="stress12"> <input name="attr_stress12" type="checkbox" class="stress12"><span></span></div>
     </div>
     <div class="skills">
         <label><input type="number" name="attr_fight" value="4" min="4" max="8" class="fight"/></label>
@@ -37,7 +37,7 @@
         <label><input type="number" name="attr_swiftly" value="4" min="4" max="8" class="swiftly"/></label>
     </div>
     <div class="button">
-        <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[?{Number of Dice|2}d20<[[?{Skill}+?{Style}]]cs<?{Focus}cf20]]}}'/>
+        <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight} Fight|Move, @{move} Move|Study, @{study} Study|Survive, @{survive} Survive|Talk, @{talk} Talk|Tinker, @{tinker} Tinker}]] + [[?{Style|Boldly, @{boldly} Boldy|Carefully, @{carefully} Carefully|Cleverly, @{cleverly} Cleverly|Forcefully, @{forcefully} Forcefully|Quietly, @{quietly} Quietly|Swiftly, @{swiftly} Swiftly}]]]]?{Skill}?{Style}}} {{Focus=?{Focus|1}}} {{Successes=[[?{Number of Dice|2}d20<[[?{Skill}+?{Style}]]cs<?{Focus}cf20]]}}'/>
     </div>
     <div class="momentum">
         <label><input type="number" name="attr_momentum" value="0" min="0" max="6" class="momentum"/></label>

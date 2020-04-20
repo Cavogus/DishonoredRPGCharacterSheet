@@ -374,9 +374,9 @@ input[type="checkbox"]:checked + span::before
     text-align: center;
 }
 .sheet-momentum-text {
-    position: relative;
-    top: -208px;
-    left: -270px;
+    position: absolute;
+    bottom: 180px;
+    left: 110px;
     background-color: transparent;
     font-size: 12px;
     border-color: transparent;
@@ -387,7 +387,7 @@ input[type="checkbox"]:checked + span::before
 
 .sheet-void-points {
     position: relative;
-    bottom: 232px;
+    bottom: 223px;
     left: 118px;
     background-color: transparent;
     font-size: 20px;
@@ -409,7 +409,7 @@ input[type="checkbox"]:checked + span::before
     min-width: 150px;
     max-width:150px;
     left: 0px;
-    top: -465px;
+    top: -445px;
 }
 
 .sheet-focuses {
@@ -423,7 +423,7 @@ input[type="checkbox"]:checked + span::before
     min-width: 150px;
     max-width:150px;
     left: 370px;
-    top: -600px;
+    top: -580px;
 }
 .sheet-talents {
     position: relative;
@@ -436,7 +436,7 @@ input[type="checkbox"]:checked + span::before
     min-width: 160px;
     max-width:160px;
     left: 180px;
-    top: -660px;
+    top: -640px;
 }
 
 .sheet-notes {
@@ -450,7 +450,7 @@ input[type="checkbox"]:checked + span::before
     min-width: 120px;
     max-width:120px;
     left: 55px;
-    top: -625px;
+    top: -605px;
 }
 
 .sheet-belongings {
@@ -464,7 +464,7 @@ input[type="checkbox"]:checked + span::before
     min-width: 120px;
     max-width:120px;
     left: 343px;
-    top: -750px;
+    top: -730px;
 }
 
 .sheet-powers {
@@ -478,5 +478,5 @@ input[type="checkbox"]:checked + span::before
     min-width: 100px;
     max-width:100px;
     left: 210px;
-    top: -880px;
+    top: -860px;
 }

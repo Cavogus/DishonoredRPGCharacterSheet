@@ -1,84 +1,515 @@
-<div class="main">
-    <div class="info">
-        <label><input name="attr_character_name" type="text" class="name" placeholder="Name"/></label>
-        <label><input name="attr_age" type="text" class="age" placeholder="Age"/></label>
-        <label><input name="attr_first_truth" type="text" class="first-truth" placeholder="First Truth"/></label>
-        <label><input name="attr_second_truth" type="text" class="second-truth" placeholder="Second Truth"/></label>
-        <label><input name="attr_archetype" type="text" class="archetype" placeholder="Archetype"/></label>
-    </div>
-    <div class="stress">
-        <div class="stress1"><input name="attr_stress1" type="checkbox" class="stress1"><span></span></div>
-        <div class="stress2"><input name="attr_stress2" type="checkbox" class="stress2"><span></span></div>
-        <div class="stress3"><input name="attr_stress3" type="checkbox" class="stress3"><span></span></div>
-        <div class="stress4"><input name="attr_stress4" type="checkbox" class="stress4"><span></span></div>
-        <div class="stress5"><input name="attr_stress5" type="checkbox" class="stress5"><span></span></div>
-        <div class="stress6"><input name="attr_stress6" type="checkbox" class="stress6"><span></span></div>
-        <div class="stress7"><input name="attr_stress7" type="checkbox" class="stress7"><span></span></div>
-        <div class="stress8"><input name="attr_stress8" type="checkbox" class="stress8"><span></span></div>
-        <div class="stress9"><input name="attr_stress9" type="checkbox" class="stress9"><span></span></div>
-        <div class="stress10"><input name="attr_stress10" type="checkbox" class="stress10"><span></span></div>
-        <div class="stress11"><input name="attr_stress11" type="checkbox" class="stress11"><span></span></div>
-        <div class="stress12"> <input name="attr_stress12" type="checkbox" class="stress12"><span></span></div>
-    </div>
-    <div class="skills">
-        <label><input type="number" name="attr_fight" value="4" min="4" max="8" class="fight"/></label>
-        <label><input type="number" name="attr_move" value="4" min="4" max="8" class="move"/></label>
-        <label><input type="number" name="attr_study" value="4" min="4" max="8" class="study"/></label>
-        <label><input type="number" name="attr_survive" value="4" min="4" max="8" class="survive"/></label>
-        <label><input type="number" name="attr_talk" value="4" min="4" max="8" class="talk"/></label>
-        <label><input type="number" name="attr_tinker" value="4" min="4" max="8" class="tinker"/></label>
-    </div>
-     <div class="styles">
-        <label><input type="number" name="attr_boldly" value="4" min="4" max="8" class="boldly"/></label>
-        <label><input type="number" name="attr_carefully" value="4" min="4" max="8" class="carefully"/></label>
-        <label><input type="number" name="attr_cleverly" value="4" min="4" max="8" class="cleverly"/></label>
-        <label><input type="number" name="attr_forcefully" value="4" min="4" max="8" class="forcefully"/></label>
-        <label><input type="number" name="attr_quietly" value="4" min="4" max="8" class="quietly"/></label>
-        <label><input type="number" name="attr_swiftly" value="4" min="4" max="8" class="swiftly"/></label>
-    </div>
-    <div class="button2">
-        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
-         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
-         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>2d20</button>
-    </div>
-    <div class="button3">
-        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
-         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
-         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>3d20</button>
-    </div>
-    <div class="button4">
-        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
-         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
-         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>4d20</button>
-    </div>
-    <div class="button5">
-        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
-         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
-         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>5d20</button>
-    </div>
-    <div class="momentum">
-        <label><input type="number" name="attr_momentum" value="0" min="0" max="6" class="momentum"/></label>
-        <div class="momentum-text">Momentum</div>
-    </div>
-    <div class="void-points">
-        <label><input type="number" name="attr_void_points" value="0" min="0" max="3" class="void-points"/></label>
-    </div>
-    <div class"contacts">
-        <label><textarea name="attr_contacts" cols="20" rows="6" class="contacts"></textarea></label>
-    </div>
-    <div class"focuses">
-        <label><textarea name="attr_focuses" cols="12" rows="6" class="focuses"></textarea></label>
-    </div>
-    <div class"talents">
-        <label><textarea name="attr_talents" cols="12" rows="6" class="talents"></textarea></label>
-    </div>
-    <div class"notes">
-        <label><textarea name="attr_notes" cols="12" rows="6" class="notes"></textarea></label>
-    </div>
-    <div class"belongings">
-        <label><textarea name="attr_belongings" cols="12" rows="6" class="belongings"></textarea></label>
-    </div>
-    <div class"powers">
-        <label><textarea name="attr_powers" cols="12" rows="6" class="powers"></textarea></label>
-    </div>
-</div>
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700&display=swap');
+
+.charsheet {
+    background-image: url("https://raw.githubusercontent.com/Cavogus/projects/master/CharacterSheet.png");
+    background-repeat: no-repeat;
+    max-width: auto;
+    min-width: auto;
+    max-height: auto;
+    min-height: auto;
+}
+
+
+/*----------------- GENERAL CSS ------------------*/
+
+textarea {
+  width: auto;
+  height: auto;
+}
+
+.sheet-main {
+    width: 546;
+    height: 819px;
+    font-family: 'Cinzel';
+}
+
+.sheet-flex-col {
+  display: flex;
+  flex-flow: row wrap;
+  /*justify-content: flex-start;*/
+}
+
+.sheet-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-info {
+    position: relative;
+    left: 160px;
+    top: 37px;
+}
+
+.sheet-name {
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-age {
+    position: relative;
+    top: 7px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-first-truth {
+    position: relative;
+    top: 15px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-second-truth {
+    position: relative;
+    top: 22px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-archetype {
+    position: relative;
+    top: 30px;
+    max-height: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+}
+
+.sheet-stress {
+    border-color: black;
+    position: relative;
+    border-color: transparent;
+    background-color: transparent;
+    top: 83px;
+    left: 168px;
+}
+
+input[type="checkbox"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="checkbox"] + span::before
+{
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: transparent;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+input[type="checkbox"] + span::before
+{
+    content: "";
+    width: 10px;
+    height: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+input[type="checkbox"]:checked + span::before
+{
+    background-color: transparent;
+    border-color: transparent;
+    content: "⬤";
+}
+
+.sheet-stress1 {
+    position: relative;
+    top: 31px;
+    left: 21px;
+}
+.sheet-stress2 {
+    position: relative;
+    top: 2px;
+    left: 32px;
+}
+.sheet-stress3 {
+    position: relative;
+    top: -24px;
+    left: 44px;
+}
+.sheet-stress4 {
+    position: relative;
+    top: -49px;
+    left: 58px;
+}
+.sheet-stress5 {
+    position: relative;
+    top: -71px;
+    left: 72px;
+}
+.sheet-stress6 {
+    position: relative;
+    top: -91px;
+    left: 87px;
+}
+.sheet-stress7 {
+    position: relative;
+    top: -110px;
+    left: 102px;
+}
+.sheet-stress8 {
+    position: relative;
+    top: -125px;
+    left: 117px;
+}
+.sheet-stress9 {
+    position: relative;
+    top: -139px;
+    left: 131px;
+}
+.sheet-stress10 {
+    position: relative;
+    top: -150px;
+    left: 145px;
+}
+.sheet-stress11 {
+    position: relative;
+    top: -160px;
+    left: 158px;
+}
+.sheet-stress12 {
+    position: relative;
+    top: -168px;
+    left: 168px;
+}
+
+.sheet-skills {
+    position: relative;
+    bottom: 82px;
+    left: 103px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-fight {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    width: 10px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-move {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 5px;
+    top: -12px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-study {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -24px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-survive {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -38px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-talk {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -52px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-tinker {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -65px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-styles {
+    position: relative;
+    bottom: 260px;
+    left: 385px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-boldly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    width: 10px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-carefully {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 5px;
+    top: -13px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-cleverly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -25px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-forcefully {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -39px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-quietly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -54px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-swiftly {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    height: 5px;
+    width: 10px;
+    top: -68px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-button2 {
+    position: relative;
+    bottom: 450px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button3 {
+    position: relative;
+    bottom: 520px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button4 {
+    position: relative;
+    bottom: 590px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button5 {
+    position: relative;
+    bottom: 660px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sheet-momentum {
+    position: relative;
+    top: -188px;
+    left: 118px;
+    background-color: transparent;
+    font-size: 20px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.sheet-momentum-text {
+    position: absolute;
+    bottom: 180px;
+    left: 110px;
+    background-color: transparent;
+    font-size: 12px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.sheet-void-points {
+    position: relative;
+    bottom: 223px;
+    left: 118px;
+    background-color: transparent;
+    font-size: 20px;
+    border-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.sheet-contacts {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height:100px;
+    min-width: 150px;
+    max-width:150px;
+    left: 0px;
+    top: -445px;
+}
+
+.sheet-focuses {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height:100px;
+    min-width: 150px;
+    max-width:150px;
+    left: 370px;
+    top: -580px;
+}
+.sheet-talents {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 160px;
+    max-width:160px;
+    left: 180px;
+    top: -640px;
+}
+
+.sheet-notes {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 120px;
+    max-width:120px;
+    left: 55px;
+    top: -605px;
+}
+
+.sheet-belongings {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 90px;
+    max-height:90px;
+    min-width: 120px;
+    max-width:120px;
+    left: 343px;
+    top: -730px;
+}
+
+.sheet-powers {
+    position: relative;
+    background-color: white;
+    border-color: black;
+    font-size: 10px;
+    line-height: 10px;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    max-width:100px;
+    left: 210px;
+    top: -860px;
+}

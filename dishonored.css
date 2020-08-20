@@ -21,6 +21,7 @@ textarea {
     width: 546;
     height: 819px;
     font-family: 'Cinzel';
+    font-weight: bold;
 }
 
 .sheet-flex-col {
@@ -350,10 +351,43 @@ input[type="checkbox"]:checked + span::before
     text-align: center;
 }
 
-.sheet-button {
+.sheet-button2 {
     position: relative;
-    bottom: 360px;
-    left: 250px;
+    bottom: 450px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button3 {
+    position: relative;
+    bottom: 520px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button4 {
+    position: relative;
+    bottom: 590px;
+    left: 228px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.sheet-button5 {
+    position: relative;
+    bottom: 660px;
+    left: 228px;
     min-height: 100px;
     min-width: 100px;
     max-height: 100px;
@@ -364,7 +398,7 @@ input[type="checkbox"]:checked + span::before
 
 .sheet-momentum {
     position: relative;
-    top: -188px;
+    top: -338px;
     left: 118px;
     background-color: transparent;
     font-size: 20px;
@@ -375,7 +409,7 @@ input[type="checkbox"]:checked + span::before
 }
 .sheet-momentum-text {
     position: absolute;
-    bottom: 180px;
+    bottom: 330px;
     left: 110px;
     background-color: transparent;
     font-size: 12px;
@@ -387,7 +421,7 @@ input[type="checkbox"]:checked + span::before
 
 .sheet-void-points {
     position: relative;
-    bottom: 223px;
+    bottom: 373px;
     left: 118px;
     background-color: transparent;
     font-size: 20px;
@@ -402,81 +436,81 @@ input[type="checkbox"]:checked + span::before
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 100px;
     max-height:100px;
     min-width: 150px;
     max-width:150px;
     left: 0px;
-    top: -445px;
+    top: -750px;
 }
 
 .sheet-focuses {
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 100px;
     max-height:100px;
     min-width: 150px;
     max-width:150px;
     left: 370px;
-    top: -580px;
+    top: -885px;
 }
 .sheet-talents {
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 90px;
     max-height:90px;
     min-width: 160px;
     max-width:160px;
     left: 180px;
-    top: -640px;
+    top: -945px;
 }
 
 .sheet-notes {
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 90px;
     max-height:90px;
-    min-width: 120px;
-    max-width:120px;
-    left: 55px;
-    top: -605px;
+    min-width: 170px;
+    max-width:170px;
+    left: 5px;
+    top: -910px;
 }
 
 .sheet-belongings {
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 90px;
     max-height:90px;
-    min-width: 120px;
-    max-width:120px;
+    min-width: 170px;
+    max-width:170px;
     left: 343px;
-    top: -730px;
+    top: -1035px;
 }
 
 .sheet-powers {
     position: relative;
     background-color: white;
     border-color: black;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     min-height: 100px;
     max-height: 100px;
     min-width: 100px;
     max-width:100px;
     left: 210px;
-    top: -860px;
+    top: -1165px;
 }

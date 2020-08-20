@@ -36,8 +36,25 @@
         <label><input type="number" name="attr_quietly" value="4" min="4" max="8" class="quietly"/></label>
         <label><input type="number" name="attr_swiftly" value="4" min="4" max="8" class="swiftly"/></label>
     </div>
-    <div class="button">
-        <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight} Fight|Move, @{move} Move|Study, @{study} Study|Survive, @{survive} Survive|Talk, @{talk} Talk|Tinker, @{tinker} Tinker}]] + [[?{Style|Boldly, @{boldly} Boldy|Carefully, @{carefully} Carefully|Cleverly, @{cleverly} Cleverly|Forcefully, @{forcefully} Forcefully|Quietly, @{quietly} Quietly|Swiftly, @{swiftly} Swiftly}]]]]?{Skill}?{Style}}} {{Focus=?{Focus|1}}} {{Successes=[[?{Number of Dice|2}d20<[[?{Skill}+?{Style}]]cs<?{Focus}cf20]]}}'/>
+    <div class="button2">
+        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
+         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
+         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>2d20</button>
+    </div>
+    <div class="button3">
+        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
+         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
+         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>3d20</button>
+    </div>
+    <div class="button4">
+        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
+         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
+         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>4d20</button>
+    </div>
+    <div class="button5">
+        <input type="hidden" name="attr_diceRoll" value="[[ {{ceil(([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - d20cs<[[[[?{Skill&#125;]]+[[?{Style&#125;]]]]cf<?{Focus&#125;cf>20 + 1e-2) / ([[[[?{Skill&#125;]]+[[?{Style&#125;]]]] - ?{Focus&#125;))&#44; {2&#125;&#125;kl1&#44; {0&#125;&#125;kh1 ]]" />
+         <input type="hidden" name="attr_target" value="[[[[?{Skill}]]+[[?{Style}]]]]" />
+         <button type='roll' name='roll_2d20' value='&{template:default} {{name=@{character_name}}} {{target=[[[[?{Skill|Fight, @{fight}|Move, @{move}|Study, @{study}|Survive, @{survive}|Talk, @{talk}|Tinker, @{tinker}}]] + [[?{Style|Boldly, @{boldly}|Carefully, @{carefully}|Cleverly, @{cleverly}|Forcefully, @{forcefully}|Quietly, @{quietly}|Swiftly, @{swiftly}}]]]]}} {{Focus=?{Focus|1}}} {{Successes=[[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] + [[ {{ceil(([[[[?{Skill}]]+[[?{Style}]]]] - d20cs<[[[[?{Skill}]]+[[?{Style}]]]]cf<?{Focus}cf>20 + 1e-2) / ([[[[?{Skill}]]+[[?{Style}]]]] - ?{Focus})), {2}}kl1, {0}}kh1 ]] }}'>5d20</button>
     </div>
     <div class="momentum">
         <label><input type="number" name="attr_momentum" value="0" min="0" max="6" class="momentum"/></label>
@@ -47,7 +64,7 @@
         <label><input type="number" name="attr_void_points" value="0" min="0" max="3" class="void-points"/></label>
     </div>
     <div class"contacts">
-        <label><textarea name="attr_contacts" cols="12" rows="6" class="contacts"></textarea></label>
+        <label><textarea name="attr_contacts" cols="20" rows="6" class="contacts"></textarea></label>
     </div>
     <div class"focuses">
         <label><textarea name="attr_focuses" cols="12" rows="6" class="focuses"></textarea></label>
